@@ -1,0 +1,51 @@
+
+[
+  {
+    "id": 1,
+    "type": "image",
+    "caption": "ASICON 2023 - Visakhapatnam (The All India Surgeons meet)",
+    "imagePath": "src/images/ASICON 2023 - Visakhapatnam (The All India Surgeons meet).png"
+  },
+  {
+    "id": 2,
+    "type": "image",
+    "caption": "Ramky Estates - Celebrating 28 Years of Excellence",
+    "imagePath": "src/images/Ramky Estates - Celebrating 28 Years of Excellence.png"
+  },
+  {
+    "id": 3,
+    "type": "image",
+    "caption": "H’ble Chief Minister of Andhra Pradesh - Shri Y S JAGAN MOHAN REDDY Garu",
+    "imagePath": "src/images/H’ble Chief Minister of Andhra Pradesh - Shri Y S JAGAN MOHAN REDDY Garu H’ble Chief Minister of Telangana - Shri ANUMULA REVANTH REDDY garu.png"
+  },
+  {
+    "id": 4,
+    "type": "image",
+    "caption": "The South Factor",
+    "imagePath": "src/images/The South Factor.png"
+  },
+  {
+    "id": 5,
+    "type": "image",
+    "caption": "Post Budget Interaction with Niramala Sitharaman , Hon'ble Union Minister of Finanace & Corporate",
+    "imagePath": "src/images/WithNirmalaMam.png"
+  },
+  {
+    "id": 6,
+    "type": "image",
+    "caption": "PM Vishwakarma Scheme Launch - Warangal",
+    "imagePath": "src/images/PM Vishwakarma Scheme Launch - Warangal.png"
+  },
+  {
+    "id": 7,
+    "type": "image",
+    "caption": "Winter Carnival at Ramoji Film City 2023",
+    "imagePath": "src/images/Winter Carnival at Ramoji Film City 2023.png"
+  },
+  {
+    "id": 8,
+    "type": "image",
+    "caption": "InveCas - Global Investors Summit 2023",
+    "imagePath": "src/images/InveCas - Global Investors Summit 2023.png"
+  }
+]

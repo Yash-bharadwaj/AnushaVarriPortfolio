@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 35 91% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 25% 27%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 35 91% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 35 91% 51%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode variables */
+  .light-mode {
+    --background: 322 35% 95%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 322 65% 55%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 270 60% 95%;
+    --secondary-foreground: 270 40% 50%;
+
+    --muted: 270 30% 90%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 322 65% 55%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 270 20% 80%;
+    --input: 270 20% 80%;
+    --ring: 322 65% 55%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold;
+  }
+}
+
+@layer components {
+  .fancy-underline {
+    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100;
+  }
+  
+  .light-mode .fancy-underline {
+    @apply after:bg-pink-400;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1;
+  }
+  
+  .light-mode .section-heading {
+    @apply text-gray-800 after:bg-pink-400;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24;
+  }
+  
+  .reveal-animation {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .reveal-animation.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg;
+  }
+  
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gold-gradient;
+  }
+  
+  .light-mode .gradient-text {
+    @apply bg-pink-purple-gradient;
+  }
+  
+  .btn-primary {
+    @apply bg-anushagold text-white font-medium rounded-md px-6 py-3 hover:bg-yellow-500 transition-colors duration-300 shadow-md;
+  }
+  
+  .light-mode .btn-primary {
+    @apply bg-pink-500 text-white hover:bg-pink-400;
+  }
+}
+
+@layer utilities {
+  .clip-path-slant {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  }
+  
+  .bg-pink-purple-gradient {
+    background: linear-gradient(135deg, #D946EF 0%, #9B87F5 50%, #D946EF 100%);
+  }
+}

@@ -1,0 +1,53 @@
+
+[
+  {
+    "id": 1,
+    "name": "Bayer",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 2,
+    "name": "Jam Junxion",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 3,
+    "name": "Cinematica",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 4,
+    "name": "Telangana TV",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 5,
+    "name": "Ramoji Film City",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 6,
+    "name": "End Polio",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 7,
+    "name": "HCL Technologies",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 8,
+    "name": "IBM India",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 9,
+    "name": "Radio Mirchi",
+    "logoPath": "/placeholder.svg"
+  },
+  {
+    "id": 10,
+    "name": "Deloitte",
+    "logoPath": "/placeholder.svg"
+  }
+]
