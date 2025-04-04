@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { Play } from 'lucide-react';
@@ -86,7 +85,7 @@ const ScrollingGallery = () => {
                         />
                       ) : (
                         <img 
-                          src={item.thumbnailPath} 
+                          src={item.imagePath} 
                           alt={`Video carousel thumbnail ${item.id} (600x400px)`} 
                           className="w-full h-full object-cover opacity-70"
                         />
@@ -110,7 +109,7 @@ const ScrollingGallery = () => {
                         </DialogTrigger>
                         <DialogContent className="max-w-3xl p-1 bg-black border-gray-800">
                           <div className="aspect-video w-full bg-black flex items-center justify-center">
-                            <p className="text-white/50">Video {item.videoId} Player Placeholder</p>
+                            <p className="text-white/50">Video {item.id} Player Placeholder</p>
                           </div>
                         </DialogContent>
                       </Dialog>

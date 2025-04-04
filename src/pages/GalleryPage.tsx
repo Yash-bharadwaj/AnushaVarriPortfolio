@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -73,15 +72,17 @@ const GalleryPage = () => {
               className={cn(
                 "relative overflow-hidden rounded-lg bg-gray-900/50 backdrop-blur-sm",
                 index % 5 === 0 && "sm:col-span-2 sm:row-span-2",
-                "h-64 sm:h-auto group"
+                item.id === 3 ? "h-[400px]" : "h-64 sm:h-auto aspect-square",
+                "group"
               )}
             >
               {item.type === 'image' ? (
                 <>
                   <img 
-                    src={item.imagePath} 
+                    src={item.id === 3 ? '/images/H\'ble Chief Minister of Andhra Pradesh - Shri Y S JAGAN MOHAN REDDY Garu H\'ble Chief Minister of Telangana - Shri ANUMULA REVANTH REDDY garu.png' : item.imagePath} 
                     alt={`Gallery image ${item.id}${index % 5 === 0 ? ' (800x800px - featured large)' : ' (400x400px)'}`} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 opacity-60 group-hover:opacity-80 transition-opacity"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4">
