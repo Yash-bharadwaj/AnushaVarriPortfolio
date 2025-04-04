@@ -26,7 +26,8 @@ const App = () => (
             <Route path="/work/:workId" element={<WorkDetail />} />
             <Route path="/all-events" element={<AllEvents />} />
             <Route path="/gallery" element={<GalleryPage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTEdsf
+             */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
