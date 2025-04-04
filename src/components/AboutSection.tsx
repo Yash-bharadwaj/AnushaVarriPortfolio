@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { CheckCircle, Mic } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -86,7 +85,7 @@ const AboutSection = () => {
                   : "bg-gradient-to-br from-pink-300 to-purple-400"
               )}>
                 <div className="absolute inset-0 flex items-center justify-center text-white/20 text-xl">
-                  <img src="src/images/Anusha Portrait (800x1000px).png" alt="" />
+                  <img src="/images/Anusha Portrait (800x1000px).png" alt="" />
                 </div>
                 {/* Mic icon overlay on the image */}
                 <div className="absolute bottom-5 right-5 opacity-30">
