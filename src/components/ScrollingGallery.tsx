@@ -1,6 +1,8 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { 
   Carousel, 
@@ -49,7 +51,7 @@ const ScrollingGallery = () => {
 
   return (
     <section className="relative py-16 bg-gradient-to-b from-anushablue/90 to-anushablue z-10">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/f79beb2f-99b7-4b3f-b843-57a892e9a739.png')] bg-center bg-cover opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/images/ASICON 2023 - Visakhapatnam (The All India Surgeons meet).png')] bg-center bg-cover opacity-10"></div>
       
       <div className="container mx-auto px-4 relative">
         <h2 className="text-2xl md:text-3xl font-montserrat font-bold text-center mb-8">
@@ -82,10 +84,11 @@ const ScrollingGallery = () => {
                           src={item.imagePath} 
                           alt={`Gallery carousel image ${item.id} (600x400px)`} 
                           className="w-full h-full object-cover opacity-70"
+                          loading="lazy"
                         />
                       ) : (
                         <img 
-                          src={item.imagePath} 
+                          src={item.imagePath}
                           alt={`Video carousel thumbnail ${item.id} (600x400px)`} 
                           className="w-full h-full object-cover opacity-70"
                         />
@@ -109,7 +112,7 @@ const ScrollingGallery = () => {
                         </DialogTrigger>
                         <DialogContent className="max-w-3xl p-1 bg-black border-gray-800">
                           <div className="aspect-video w-full bg-black flex items-center justify-center">
-                            <p className="text-white/50">Video {item.id} Player Placeholder</p>
+                            <p className="text-white/50">Video Player Placeholder (1280x720px)</p>
                           </div>
                         </DialogContent>
                       </Dialog>
@@ -127,12 +130,12 @@ const ScrollingGallery = () => {
         </div>
         
         <div className="mt-10 text-center">
-          <a href="#gallery" className="text-anushagold hover:text-yellow-400 transition-colors border-b border-anushagold/30 hover:border-yellow-400 pb-1 inline-flex items-center">
+          <Link to="/gallery" className="text-anushagold hover:text-yellow-400 transition-colors border-b border-anushagold/30 hover:border-yellow-400 pb-1 inline-flex items-center">
             View Full Gallery
             <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

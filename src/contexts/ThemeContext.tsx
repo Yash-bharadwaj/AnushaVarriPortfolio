@@ -1,6 +1,7 @@
+
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
-type Theme = 'dark';
+type Theme = 'dark' | 'light';
 
 interface ThemeContextType {
   theme: Theme;
@@ -11,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Fixed theme to dark only
-  const [theme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('dark');
 
   // No need for initializing from localStorage or toggling
   useEffect(() => {

@@ -1,50 +1,59 @@
+
 [
   {
     "id": 1,
     "type": "image",
     "caption": "ASICON 2023 - Visakhapatnam (The All India Surgeons meet)",
-    "imagePath": "/images/ASICON 2023 - Visakhapatnam (The All India Surgeons meet).png"
+    "imagePath": "/images/ASICON 2023 - Visakhapatnam (The All India Surgeons meet).png",
+    "size": "tall"
   },
   {
     "id": 2,
     "type": "image",
     "caption": "Ramky Estates - Celebrating 28 Years of Excellence",
-    "imagePath": "/images/Ramky Estates - Celebrating 28 Years of Excellence.png"
+    "imagePath": "/images/Ramky Estates - Celebrating 28 Years of Excellence.png",
+    "size": "standard"
   },
   {
     "id": 3,
     "type": "image",
-    "caption": "H'ble Chief Minister of Andhra Pradesh - Shri Y S JAGAN MOHAN REDDY Garu",
-    "imagePath": "/images/RevanthReddy.png"
+    "caption": "H'ble Chief Minister of Andhra Pradesh - Shri Y S JAGAN MOHAN REDDY Garu and H'ble Chief Minister of Telangana - Shri ANUMULA REVANTH REDDY garu",
+    "imagePath": "/images/RevanthReddy.png",
+    "size": "standard"
   },
   {
     "id": 4,
     "type": "image",
     "caption": "The South Factor",
-    "imagePath": "/images/The South Factor.png"
+    "imagePath": "/images/The South Factor.png",
+    "size": "tall"
   },
   {
     "id": 5,
     "type": "image",
-    "caption": "Post Budget Interaction with Niramala Sitharaman , Hon'ble Union Minister of Finanace & Corporate",
-    "imagePath": "/images/WithNirmalaMam.png"
+    "caption": "Post Budget Interaction with Niramala Sitharaman, Hon'ble Union Minister of Finance & Corporate",
+    "imagePath": "/images/WithNirmalaMam.png",
+    "size": "standard"
   },
   {
     "id": 6,
     "type": "image",
     "caption": "PM Vishwakarma Scheme Launch - Warangal",
-    "imagePath": "/images/PM Vishwakarma Scheme Launch - Warangal.png"
+    "imagePath": "/images/PM Vishwakarma Scheme Launch - Warangal.png",
+    "size": "standard"
   },
   {
     "id": 7,
     "type": "image",
     "caption": "Winter Carnival at Ramoji Film City 2023",
-    "imagePath": "/images/Winter Carnival at Ramoji Film City 2023.png"
+    "imagePath": "/images/Winter Carnival at Ramoji Film City 2023.png",
+    "size": "tall"
   },
   {
     "id": 8,
     "type": "image",
     "caption": "InveCas - Global Investors Summit 2023",
-    "imagePath": "/images/InveCas - Global Investors Summit 2023.png"
+    "imagePath": "/images/InveCas - Global Investors Summit 2023.png",
+    "size": "standard"
   }
 ]

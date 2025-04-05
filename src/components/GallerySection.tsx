@@ -36,12 +36,6 @@ const GallerySection = () => {
     };
   }, []);
 
-  // Map gallery items with dynamic heights
-  const galleryItems = galleryData.map((item, index) => ({
-    ...item,
-    height: index % 3 === 0 ? 'tall' : 'standard'  // Every third item is tall
-  }));
-
   return (
     <section 
       id="gallery" 
@@ -63,34 +57,35 @@ const GallerySection = () => {
           A visual journey through my performances, events, and behind-the-scenes moments.
         </p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12">
-          {galleryItems.slice(0, 8).map((item, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12">
+          {galleryData.slice(0, 8).map((item, index) => (
             <div 
               key={item.id}
               className={cn(
-                "rounded-lg overflow-hidden bg-gray-800/40 backdrop-blur-sm relative",
-                item.height === 'tall' && 'row-span-2',
+                "rounded-lg overflow-hidden bg-gray-800/40 backdrop-blur-sm relative group",
+                item.size === 'tall' ? 'row-span-2' : '',
                 "opacity-0 transform translate-y-8 transition-all duration-700",
                 isVisible && "opacity-100 translate-y-0"
               )}
               style={{ 
                 transitionDelay: isVisible ? `${0.05 * index}s` : '0s',
-                height: item.height === 'tall' ? 'auto' : '200px'
+                height: item.size === 'tall' ? '400px' : '200px'
               }}
             >
               {/* Dynamic image content */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 to-gray-900/50 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-800/30 to-gray-900/30 flex items-center justify-center overflow-hidden">
                 {item.type === 'image' ? (
                   <img 
                     src={item.imagePath} 
-                    alt={`Gallery image ${item.id} (400x300px)${item.height === 'tall' ? ' - tall image (400x600px)' : ''}`} 
-                    className="w-full h-full object-cover opacity-70"
+                    alt={`Gallery image ${item.id} ${item.size === 'tall' ? '(400x600px) - tall image' : '(400x300px)'}`} 
+                    className="w-full h-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
                   />
                 ) : (
                   <img 
-                    src={item.thumbnailPath} 
-                    alt={`Video thumbnail ${item.id} (400x300px)${item.height === 'tall' ? ' - tall thumbnail (400x600px)' : ''}`} 
-                    className="w-full h-full object-cover opacity-70"
+                    src={item.imagePath}
+                    alt={`Video thumbnail ${item.id} ${item.size === 'tall' ? '(400x600px) - tall thumbnail' : '(400x300px)'}`} 
+                    className="w-full h-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
                   />
                 )}
               </div>
@@ -99,7 +94,7 @@ const GallerySection = () => {
               {item.type === 'video' && (
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="absolute inset-0 flex items-center justify-center transition-transform hover:scale-105 group">
+                    <button className="absolute inset-0 flex items-center justify-center transition-transform group-hover:scale-105 z-10">
                       <div className="w-12 h-12 rounded-full bg-anushagold/90 flex items-center justify-center group-hover:bg-anushagold transition-colors">
                         <Play size={20} className="text-white ml-1" />
                       </div>
@@ -107,7 +102,7 @@ const GallerySection = () => {
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-1 bg-black border-gray-800">
                     <div className="aspect-video w-full bg-black flex items-center justify-center">
-                      <p className="text-white/50">Video {item.videoId} Player Placeholder</p>
+                      <p className="text-white/50">Video Player Placeholder (1280x720px)</p>
                     </div>
                   </DialogContent>
                 </Dialog>
@@ -115,11 +110,11 @@ const GallerySection = () => {
               
               {/* Hover effect for images */}
               {item.type === 'image' && (
-                <div className="absolute inset-0 bg-anushagold/0 hover:bg-anushagold/20 transition-all duration-300 cursor-pointer"></div>
+                <div className="absolute inset-0 bg-anushagold/0 hover:bg-anushagold/20 transition-all duration-300 cursor-pointer z-10"></div>
               )}
               
               {/* Caption on hover */}
-              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity">
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20">
                 <p className="text-white text-sm">{item.caption}</p>
               </div>
             </div>

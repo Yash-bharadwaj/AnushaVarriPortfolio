@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 import { CheckCircle, Mic } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -39,17 +40,13 @@ const AboutSection = () => {
     "Left a 10-year government bank job (Canara Bank) to follow her passion",
     "Hosted 100+ live events, corporate shows, and weddings",
     "Professional MC with versatile entertainment skills"
-];
-
+  ];
 
   return (
     <section
       id="about"
       ref={sectionRef}
-      className={cn(
-        "py-20 relative overflow-hidden",
-        theme === 'dark' ? "bg-anushablue" : "bg-gradient-to-b from-pink-200 to-purple-200"
-      )}
+      className="py-20 relative overflow-hidden bg-anushablue"
     >
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black/20 to-transparent"></div>
       
@@ -57,14 +54,14 @@ const AboutSection = () => {
       <div className="absolute top-20 right-10 opacity-20">
         <Mic 
           size={48} 
-          className={theme === 'dark' ? "text-anushagold" : "text-pink-500"} 
+          className="text-anushagold" 
           style={{ transform: 'rotate(-15deg)' }}
         />
       </div>
       <div className="absolute bottom-20 left-10 opacity-15">
         <Mic 
           size={36} 
-          className={theme === 'dark' ? "text-anushagold" : "text-purple-500"} 
+          className="text-anushagold" 
           style={{ transform: 'rotate(10deg)' }}
         />
       </div>
@@ -77,33 +74,21 @@ const AboutSection = () => {
             isVisible && "opacity-100 translate-y-0"
           )}>
             <div className="relative">
-              {/* Image placeholder - will be replaced by actual image */}
-              <div className={cn(
-                "aspect-[4/5] rounded-lg overflow-hidden relative",
-                theme === 'dark'
-                  ? "bg-gradient-to-br from-anushablue to-gray-900"
-                  : "bg-gradient-to-br from-pink-300 to-purple-400"
-              )}>
+              {/* Image container with gradient border */}
+              <div className="absolute inset-0 -m-3 bg-gradient-to-br from-anushagold via-yellow-500/40 to-anushablue rounded-lg blur-sm opacity-40"></div>
+              
+              <div className="aspect-[4/5] rounded-lg overflow-hidden relative bg-gradient-to-br from-anushablue to-gray-900">
                 <div className="absolute inset-0 flex items-center justify-center text-white/20 text-xl">
-                  <img src="/images/Anusha Portrait (800x1000px).png" alt="" />
+                  <img src="../images/Anusha Portrait (800x1000px).png" alt="Anusha portrait (800x1000px)" className="w-full h-full object-cover" />
                 </div>
                 {/* Mic icon overlay on the image */}
                 <div className="absolute bottom-5 right-5 opacity-30">
-                  <Mic 
-                    size={40} 
-                    className={theme === 'dark' ? "text-anushagold" : "text-white"} 
-                  />
+                  <Mic size={40} className="text-anushagold" />
                 </div>
               </div>
               
-              <div className={cn(
-                "absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-30 blur-2xl",
-                theme === 'dark' ? "bg-anushagold" : "bg-pink-500"
-              )}></div>
-              <div className={cn(
-                "absolute -top-6 -left-6 w-24 h-24 rounded-full opacity-20 blur-xl",
-                theme === 'dark' ? "bg-anushagold" : "bg-purple-500"
-              )}></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-30 blur-2xl bg-anushagold"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full opacity-20 blur-xl bg-anushagold"></div>
             </div>
           </div>
           
@@ -111,20 +96,26 @@ const AboutSection = () => {
           <div className="w-full lg:w-1/2">
             <h2 className={cn(
               "section-heading opacity-0 transition-all duration-700 delay-100",
-              isVisible && "opacity-100",
-              theme === 'light' && "text-gray-800 after:bg-pink-400"
+              isVisible && "opacity-100"
             )}>
-              Meet <span className={theme === 'dark' ? "text-anushagold" : "text-pink-500"}>Anusha</span>
+              Meet <span className="text-anushagold">Anusha</span>
             </h2>
             
             <p className={cn(
-              "text-lg opacity-0 transition-all duration-700 delay-200 mb-6",
-              isVisible && "opacity-100",
-              theme === 'dark' ? "text-white/80" : "text-gray-700"
+              "text-lg opacity-0 transition-all duration-700 delay-200 mb-6 text-white/80",
+              isVisible && "opacity-100"
             )}>
               A multi-talented performer who brings charisma, energy and professionalism to every stage. 
               From hosting corporate events to singing at cultural gatherings, I create 
               memorable experiences that captivate audiences.
+            </p>
+            
+            <p className={cn(
+              "text-lg opacity-0 transition-all duration-700 delay-300 mb-8 text-white/80",
+              isVisible && "opacity-100"
+            )}>
+              Transitioning from a stable 10-year banking career to pursue my passion as an anchor and host,
+              I've dedicated myself to spreading joy and making events truly memorable.
             </p>
             
             <div className="space-y-4 mt-8">
@@ -140,8 +131,8 @@ const AboutSection = () => {
                     transitionDelay: isVisible ? `${0.3 + index * 0.1}s` : '0s'
                   }}
                 >
-                  <CheckCircle className={theme === 'dark' ? "text-anushagold mt-1 flex-shrink-0" : "text-pink-500 mt-1 flex-shrink-0"} />
-                  <p className={theme === 'dark' ? "text-white/80" : "text-gray-700"}>{highlight}</p>
+                  <CheckCircle className="text-anushagold mt-1 flex-shrink-0" />
+                  <p className="text-white/80">{highlight}</p>
                 </div>
               ))}
             </div>
@@ -156,16 +147,11 @@ const AboutSection = () => {
               }}
             >
               <a 
-                href="#work" 
-                className={cn(
-                  "flex items-center",
-                  theme === 'dark' 
-                    ? "btn-primary" 
-                    : "bg-pink-500 text-white font-medium rounded-md px-6 py-3 hover:bg-pink-400 transition-colors duration-300 shadow-md"
-                )}
+                href="#why-hire-me" 
+                className="btn-primary flex items-center"
               >
                 <Mic size={18} className="mr-2" />
-                See My Work
+                Why Hire Me
               </a>
             </div>
           </div>

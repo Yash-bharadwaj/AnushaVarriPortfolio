@@ -4,11 +4,14 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ScrollingGallery from '@/components/ScrollingGallery';
 import AboutSection from '@/components/AboutSection';
+import VisionMissionSection from '@/components/VisionMissionSection';
+import WhyHireMeSection from '@/components/WhyHireMeSection';
 import FeaturedWorkSection from '@/components/FeaturedWorkSection';
 import GallerySection from '@/components/GallerySection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
 import ContactForm from '@/components/ContactForm';
+import ContactFormPopup from '@/components/ContactFormPopup';
 import Footer from '@/components/Footer';
 import SocialOverlay from '@/components/SocialOverlay';
 import SparkleAnimation from '@/components/SparkleAnimation';
@@ -45,6 +48,8 @@ const Index = () => {
         <HeroSection />
         <ScrollingGallery />
         <AboutSection />
+        <VisionMissionSection />
+        <WhyHireMeSection />
         <FeaturedWorkSection />
         <GallerySection />
         <TestimonialsSection />
@@ -53,6 +58,7 @@ const Index = () => {
       </main>
       <Footer />
       <SocialOverlay />
+      <ContactFormPopup />
     </div>
   );
 };
