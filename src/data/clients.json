@@ -2,52 +2,116 @@
 [
   {
     "id": 1,
-    "name": "Bayer",
-    "logoPath": "/placeholder.svg"
+    "name": "Microsoft",
+    "logoPath": "/placeholder.svg",
+    "category": "Technology"
   },
   {
     "id": 2,
-    "name": "Jam Junxion",
-    "logoPath": "/placeholder.svg"
+    "name": "ICICI Bank",
+    "logoPath": "/placeholder.svg",
+    "category": "Finance"
   },
   {
     "id": 3,
-    "name": "Cinematica",
-    "logoPath": "/placeholder.svg"
+    "name": "ICRISAT",
+    "logoPath": "/placeholder.svg",
+    "category": "Research"
   },
   {
     "id": 4,
-    "name": "Telangana TV",
-    "logoPath": "/placeholder.svg"
+    "name": "JCI",
+    "logoPath": "/placeholder.svg",
+    "category": "Organization"
   },
   {
     "id": 5,
-    "name": "Ramoji Film City",
-    "logoPath": "/placeholder.svg"
+    "name": "Hitachi",
+    "logoPath": "/placeholder.svg",
+    "category": "Technology"
   },
   {
     "id": 6,
-    "name": "End Polio",
-    "logoPath": "/placeholder.svg"
+    "name": "Lions Club International",
+    "logoPath": "/placeholder.svg",
+    "category": "Organization"
   },
   {
     "id": 7,
     "name": "HCL Technologies",
-    "logoPath": "/placeholder.svg"
+    "logoPath": "/placeholder.svg",
+    "category": "Technology"
   },
   {
     "id": 8,
     "name": "IBM India",
-    "logoPath": "/placeholder.svg"
+    "logoPath": "/placeholder.svg",
+    "category": "Technology"
   },
   {
     "id": 9,
-    "name": "Radio Mirchi",
-    "logoPath": "/placeholder.svg"
+    "name": "Fixit",
+    "logoPath": "/placeholder.svg",
+    "category": "Services"
   },
   {
     "id": 10,
+    "name": "MSD",
+    "logoPath": "/placeholder.svg",
+    "category": "Healthcare"
+  },
+  {
+    "id": 11,
+    "name": "Novotel",
+    "logoPath": "/placeholder.svg",
+    "category": "Hospitality"
+  },
+  {
+    "id": 12,
+    "name": "Bayer",
+    "logoPath": "/placeholder.svg",
+    "category": "Agriculture"
+  },
+  {
+    "id": 13,
     "name": "Deloitte",
-    "logoPath": "/placeholder.svg"
+    "logoPath": "/placeholder.svg",
+    "category": "Consulting"
+  },
+  {
+    "id": 14,
+    "name": "Jam Junxion",
+    "logoPath": "/placeholder.svg",
+    "category": "Entertainment"
+  },
+  {
+    "id": 15,
+    "name": "Cinematica",
+    "logoPath": "/placeholder.svg",
+    "category": "Entertainment"
+  },
+  {
+    "id": 16,
+    "name": "Telangana TV",
+    "logoPath": "/placeholder.svg",
+    "category": "Media"
+  },
+  {
+    "id": 17,
+    "name": "Ramoji Film City",
+    "logoPath": "/placeholder.svg",
+    "category": "Entertainment"
+  },
+  {
+    "id": 18,
+    "name": "End Polio",
+    "logoPath": "/placeholder.svg",
+    "category": "Healthcare"
+  },
+  {
+    "id": 19,
+    "name": "Radio Mirchi",
+    "logoPath": "/placeholder.svg",
+    "category": "Media"
   }
 ]
