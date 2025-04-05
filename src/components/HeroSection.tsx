@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import SparkleAnimation from './SparkleAnimation';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -52,19 +51,8 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-anushablue"
     >
-      {/* Static background with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/lovable-uploads/72947be2-156b-4258-bb58-099d8c7cb22f.png')" }}
-      />
-      
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-      
-      {/* Sparkling animation overlay */}
-      <div className="absolute inset-0 z-10 opacity-40">
-        <SparkleAnimation theme={theme} />
-      </div>
       
       {/* Content */}
       <div className="container mx-auto px-4 z-20 relative">
@@ -92,7 +80,7 @@ const HeroSection = () => {
             </h1>
             
             <div className="h-20 mt-4">
-              <h3 className="text-xl md:text-3xl font-light text-white/90 font-montserrat tracking-wide">
+              <h3 className="text-xl md:text-3xl font-medium text-white/90 font-montserrat tracking-wide">
                 Master of Ceremonies | Singer | Anchor | Live Host | Performer
               </h3>
             </div>
