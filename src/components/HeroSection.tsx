@@ -50,9 +50,9 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-anushablue"
     >
-      {/* Background image */}
+      {/* Static background with overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/lovable-uploads/72947be2-156b-4258-bb58-099d8c7cb22f.png')" }}
@@ -74,13 +74,13 @@ const HeroSection = () => {
         )}>
           <div className="text-center">
             <h2 className={cn(
-              "text-2xl md:text-3xl font-light text-white/90 mb-4",
+              "text-2xl md:text-3xl font-light text-white/90 mb-4 font-montserrat",
               isLoaded && "animate-fade-in"
             )}>
               Hi, I am
             </h2>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold tracking-tight text-white mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-montserrat font-bold tracking-tight text-white mb-6">
               <span className="block overflow-hidden my-2">
                 <span className={cn(
                   "block",
@@ -92,13 +92,13 @@ const HeroSection = () => {
             </h1>
             
             <div className="h-20 mt-4">
-              <h3 className="text-xl md:text-3xl font-light text-white/90">
+              <h3 className="text-xl md:text-3xl font-light text-white/90 font-montserrat tracking-wide">
                 Master of Ceremonies | Singer | Anchor | Live Host | Performer
               </h3>
             </div>
 
             <div className={cn(
-              "max-w-2xl mx-auto text-white/90 text-lg md:text-xl mt-8",
+              "max-w-2xl mx-auto text-white/90 text-lg md:text-xl mt-8 font-montserrat",
               isLoaded ? "opacity-100" : "opacity-0",
               "transition-opacity duration-700 delay-300"
             )}>
@@ -117,7 +117,7 @@ const HeroSection = () => {
             )}>
               <a
                 href="#contact"
-                className="font-medium rounded-md px-8 py-3 bg-anushagold hover:bg-yellow-500 transition-all duration-300 shadow-lg inline-flex items-center space-x-2 text-lg text-white"
+                className="font-medium rounded-md px-8 py-3 bg-anushagold hover:bg-yellow-500 transition-all duration-300 shadow-lg inline-flex items-center space-x-2 text-lg text-white font-montserrat"
               >
                 Book Now
                 <ArrowRight size={18} className="ml-2" />

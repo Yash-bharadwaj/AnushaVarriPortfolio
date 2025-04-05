@@ -100,7 +100,7 @@ const ClientLogoCarousel = () => {
         </div>
       </div>
       
-      {/* Add CSS for infinite scroll animation using regular style tag */}
+      {/* Add CSS for infinite scroll animation using dangerouslySetInnerHTML to fix the TypeScript error */}
       <style dangerouslySetInnerHTML={{__html: `
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
