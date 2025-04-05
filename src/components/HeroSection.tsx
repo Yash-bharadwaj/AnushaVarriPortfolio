@@ -80,7 +80,7 @@ const HeroSection = () => {
             </h1>
             
             <div className="h-20 mt-4">
-              <h3 className="text-xl md:text-3xl font-medium text-white/90 font-montserrat tracking-wide">
+              <h3 className="text-xl md:text-3xl font-bold text-white/90 font-montserrat tracking-wide">
                 Master of Ceremonies | Singer | Anchor | Live Host | Performer
               </h3>
             </div>

@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -237,14 +236,15 @@ const TestimonialsSection = () => {
                 >
                   <div className="py-4 px-6 bg-gray-800/40 backdrop-blur-sm rounded border border-white/10 transition-all duration-300 hover:border-anushagold/30 h-full flex items-center justify-center">
                     <div className="flex flex-col items-center">
-                      {client.logoPath && (
+                      {client.logoPath && client.logoPath !== "/placeholder.svg" ? (
                         <img 
                           src={client.logoPath} 
                           alt={`${client.name} logo`} 
                           className="h-10 w-auto mb-2 opacity-70"
                         />
+                      ) : (
+                        <span className="text-white/70 font-semibold text-center">{client.name}</span>
                       )}
-                      <span className="text-white/70 font-semibold text-center">{client.name}</span>
                     </div>
                   </div>
                 </CarouselItem>

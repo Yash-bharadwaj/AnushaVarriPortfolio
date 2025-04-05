@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, X, Mic } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '@/contexts/ThemeContext';
 
@@ -43,10 +43,33 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with microphone icon */}
+          {/* SVG Logo */}
           <a href="#" className="font-montserrat font-bold text-2xl flex items-center text-white">
-            <Mic size={24} className="mr-2 text-anushagold" />
-            <span className="text-anushagold">ANUSHA</span> 
+            <svg 
+              width="120" 
+              height="30" 
+              viewBox="0 0 120 30" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-anushagold"
+            >
+              {/* Microphone Icon */}
+              <g transform="translate(0, 3)">
+                <path 
+                  d="M10 2a3 3 0 0 1 3 3v10a3 3 0 1 1-6 0V5a3 3 0 0 1 3-3zm0-2a5 5 0 0 0-5 5v10a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" 
+                  fill="currentColor"
+                />
+                <path 
+                  d="M5 10v5a5 5 0 0 0 10 0v-5h2v5a7 7 0 0 1-6 6.92V24h4v2H5v-2h4v-2.08A7 7 0 0 1 3 15v-5h2z" 
+                  fill="currentColor"
+                />
+              </g>
+              
+              {/* ANUSHA Text */}
+              <text x="25" y="20" fontFamily="Montserrat" fontWeight="700" fontSize="16" fill="currentColor">
+                ANUSHA
+              </text>
+            </svg>
           </a>
 
           {/* Desktop Navigation */}
@@ -64,7 +87,10 @@ const Navbar = () => {
               href="#contact" 
               className="btn-primary flex items-center"
             >
-              <Mic size={16} className="mr-2" />
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+                <path d="M12 2a3 3 0 0 1 3 3v10a3 3 0 1 1-6 0V5a3 3 0 0 1 3-3zm0-2a5 5 0 0 0-5 5v10a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" fill="currentColor"/>
+                <path d="M5 10v5a5 5 0 0 0 10 0v-5h2v5a7 7 0 0 1-6 6.92V24h4v2H5v-2h4v-2.08A7 7 0 0 1 3 15v-5h2z" fill="currentColor"/>
+              </svg>
               Book Me
             </a>
             <ThemeToggle />
@@ -107,7 +133,10 @@ const Navbar = () => {
               onClick={toggleMenu}
               className="btn-primary text-center mt-4 flex items-center justify-center"
             >
-              <Mic size={16} className="mr-2" />
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+                <path d="M12 2a3 3 0 0 1 3 3v10a3 3 0 1 1-6 0V5a3 3 0 0 1 3-3zm0-2a5 5 0 0 0-5 5v10a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" fill="currentColor"/>
+                <path d="M5 10v5a5 5 0 0 0 10 0v-5h2v5a7 7 0 0 1-6 6.92V24h4v2H5v-2h4v-2.08A7 7 0 0 1 3 15v-5h2z" fill="currentColor"/>
+              </svg>
               Book Me
             </a>
           </div>

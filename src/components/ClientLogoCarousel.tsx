@@ -53,7 +53,7 @@ const ClientLogoCarousel = () => {
                 theme === 'dark' ? "border-gray-700/50" : "border-white/20"
               )}
             >
-              {client.logoPath ? (
+              {client.logoPath && client.logoPath !== "/placeholder.svg" ? (
                 <img 
                   src={client.logoPath} 
                   alt={client.name} 
@@ -81,7 +81,7 @@ const ClientLogoCarousel = () => {
                 theme === 'dark' ? "border-gray-700/50" : "border-white/20"
               )}
             >
-              {client.logoPath ? (
+              {client.logoPath && client.logoPath !== "/placeholder.svg" ? (
                 <img 
                   src={client.logoPath} 
                   alt={client.name} 
