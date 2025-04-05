@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Mic } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,7 +11,7 @@ const HeroSection = () => {
   const [displayedRole, setDisplayedRole] = useState(roles[0]);
   const { theme } = useTheme();
   
-  // New state for typing animation
+  // State for typing animation
   const fullText = "Hosted 100+ live events, corporate shows, and weddings. With a dynamic presence and versatile talent, I create unforgettable experiences for audiences across all occasions.";
   const [typedText, setTypedText] = useState('');
   const [typingComplete, setTypingComplete] = useState(false);
@@ -80,8 +79,8 @@ const HeroSection = () => {
       {/* Background overlay pattern */}
       <div className="absolute inset-0 bg-hero-pattern opacity-30 z-0"></div>
       
-      {/* Left side microphone icon */}
-      <div className="absolute left-[5%] top-1/2 transform -translate-y-1/2 z-10 opacity-60">
+      {/* Left side microphone icon - keeping just two mic icons for a cleaner look */}
+      <div className="absolute left-[5%] top-1/2 transform -translate-y-1/2 z-10 opacity-40">
         <Mic 
           size={60} 
           className={cn(
@@ -93,7 +92,7 @@ const HeroSection = () => {
       </div>
       
       {/* Right side microphone icon */}
-      <div className="absolute right-[5%] top-1/2 transform -translate-y-1/2 z-10 opacity-60">
+      <div className="absolute right-[5%] top-1/2 transform -translate-y-1/2 z-10 opacity-40">
         <Mic 
           size={60} 
           className={cn(
@@ -102,100 +101,6 @@ const HeroSection = () => {
           )} 
           strokeWidth={1.5}
           style={{ animationDelay: '1s' }}
-        />
-      </div>
-      
-      {/* Add more microphone icons across the hero section */}
-      <div className="absolute top-1/4 left-1/4 z-10 opacity-70">
-        <Mic 
-          size={24} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-anushagold" : "text-pink-400"
-          )} 
-          style={{ animationDelay: '0.5s' }} 
-        />
-      </div>
-      <div className="absolute bottom-1/3 right-1/4 z-10 opacity-60">
-        <Mic 
-          size={18} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-anushagold" : "text-pink-400"
-          )} 
-          style={{ animationDelay: '1.2s' }} 
-        />
-      </div>
-      <div className="absolute top-2/3 left-1/3 z-10 opacity-50">
-        <Mic 
-          size={20} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-anushagold" : "text-pink-400"
-          )} 
-          style={{ animationDelay: '0.8s' }} 
-        />
-      </div>
-      <div className="absolute top-1/3 right-1/3 z-10 opacity-40">
-        <Mic 
-          size={16} 
-          className={cn(
-            "animate-float", 
-            theme === 'dark' ? "text-white/70" : "text-white"
-          )} 
-          style={{ animationDelay: '1.5s' }} 
-        />
-      </div>
-      <div className="absolute bottom-1/4 left-1/5 z-10 opacity-30">
-        <Mic 
-          size={22} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-white/60" : "text-white/80"
-          )} 
-          style={{ animationDelay: '0.3s' }} 
-        />
-      </div>
-      
-      {/* Additional microphone icons */}
-      <div className="absolute top-1/6 right-1/6 z-10 opacity-50">
-        <Mic 
-          size={28} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-anushagold" : "text-pink-500"
-          )} 
-          style={{ animationDelay: '1.7s' }} 
-        />
-      </div>
-      <div className="absolute bottom-1/6 right-1/3 z-10 opacity-60">
-        <Mic 
-          size={24} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-anushagold/80" : "text-pink-400/90"
-          )} 
-          style={{ animationDelay: '0.9s' }} 
-        />
-      </div>
-      <div className="absolute top-1/2 left-1/6 z-10 opacity-40">
-        <Mic 
-          size={30} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-anushagold/70" : "text-pink-500/80"
-          )} 
-          style={{ animationDelay: '1.1s' }} 
-        />
-      </div>
-      <div className="absolute bottom-1/5 right-1/5 z-10 opacity-30">
-        <Mic 
-          size={26} 
-          className={cn(
-            "animate-float",
-            theme === 'dark' ? "text-white/50" : "text-white/70"
-          )} 
-          style={{ animationDelay: '1.3s' }} 
         />
       </div>
       

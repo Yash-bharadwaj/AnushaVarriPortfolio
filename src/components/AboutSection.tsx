@@ -79,7 +79,7 @@ const AboutSection = () => {
               
               <div className="aspect-[4/5] rounded-lg overflow-hidden relative bg-gradient-to-br from-anushablue to-gray-900">
                 <div className="absolute inset-0 flex items-center justify-center text-white/20 text-xl">
-                  <img src="../images/Anusha Portrait (800x1000px).png" alt="Anusha portrait (800x1000px)" className="w-full h-full object-cover" />
+                  <img src="/images/Anusha Portrait (800x1000px).png" alt="Anusha portrait" className="w-full h-full object-cover" />
                 </div>
                 {/* Mic icon overlay on the image */}
                 <div className="absolute bottom-5 right-5 opacity-30">
