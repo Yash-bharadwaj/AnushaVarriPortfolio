@@ -101,8 +101,7 @@ const ClientLogoCarousel = () => {
       </div>
       
       {/* Add CSS for infinite scroll animation using regular style tag */}
-      <style>
-        {`
+      <style dangerouslySetInnerHTML={{__html: `
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
@@ -119,8 +118,7 @@ const ClientLogoCarousel = () => {
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
-        `}
-      </style>
+      `}} />
     </div>
   );
 };

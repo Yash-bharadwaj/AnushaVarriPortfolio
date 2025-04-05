@@ -14,6 +14,7 @@ import ContactFormPopup from '@/components/ContactFormPopup';
 import Footer from '@/components/Footer';
 import SocialOverlay from '@/components/SocialOverlay';
 import { useTheme } from '@/contexts/ThemeContext';
+import ClientLogoCarousel from '@/components/ClientLogoCarousel';
 
 const Index = () => {
   const { theme } = useTheme();
@@ -23,6 +24,9 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <div className="bg-black/90 py-6">
+          <ClientLogoCarousel />
+        </div>
         <AboutSection />
         <VisionMissionSection />
         <WhyHireMeSection />
